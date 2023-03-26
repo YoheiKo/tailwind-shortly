@@ -1,86 +1,73 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+
+// https://github.com/bradtraversy/tailwind-course-projects
+// https://uidesigndaily.com/
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <div className="">
+      <div>
+        <div className="flex justify-center items-center h-screen bg-zinc-500">
+          <div className="bg-zinc-700 p-2 mx-6 rounded-2xl">
+            {/* Flex Container */}
+            <div className="flex flex-col md:flex-row md:justify-center md:items-center rounded-l-xl">
+              {/* Image */}
+              <img
+                src="image.jpg"
+                alt=""
+                className="object-fit rounded-xl h-80 md:h-[460px] md:rounded-l-xl md:rounded-r-none transform duration-200 hover:scale-105 hover:rouded-xl"
+              />
+              {/* Content */}
+              <div className="p-6 md:p-12">
+                <h2 className="font-serif text-xl font-medium text-center text-white">
+                  Front-end design using Next.js - Tailwind
+                </h2>
+                <p className="max-w-xs my-4 text-xs leading-5 tracking-wide text-center text-white md:text-left">
+                  Made by YoheiKo. The content of this site do not have backend
+                  features. <br />
+                  Full credit to{" "}
+                  <Link href="https://www.traversymedia.com">
+                    www.traversymedia.com
+                  </Link>
+                </p>
+                <div className="flex flex-col mt-5 space-y-4 md:space-x-3 md:flex-row md:space-y-0">
+                  <input
+                    type="text"
+                    placeholder="Enter your email address"
+                    className="p-2 px-4 text-center text-white bg-zinc-800 border border-zinc-400 rounded-sm placeholder:text-xs placeholder:text-center md:text-left placeholder:md:text-left focus:outline-none"
+                  />
+                  <button className="px-5 py-3 text-xs rounded-md text-zinc-800 bg-lime-500 hover:bg-lime-700 hover:text-white duration-300">
+                    Submit
+                  </button>
+                </div>
+                <div className="flex flex-col justify-center md:justify-start space-y-4 mt-4 text-white">
+                  <h2>Link to design pages :</h2>
+                  <Link href="/" className="">
+                    Home
+                  </Link>
+                  <Link href="/imagegallery" className="">
+                    Image Gallery
+                  </Link>
+                  <Link href="/loginmodal" className="">
+                    Login Modal
+                  </Link>
+                  <Link href="/price" className="">
+                    Price
+                  </Link>
+                  <Link href="/product" className="">
+                    Product
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
