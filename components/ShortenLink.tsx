@@ -1,6 +1,16 @@
 import React from "react";
 
-function ShortenLink({ longLink, shortLink, bgColor }) {
+interface ShortenLinkProps {
+  longLink: string;
+  shortLink: string;
+  bgColor: string;
+}
+
+const ShortenLink: React.FC<ShortenLinkProps> = ({
+  longLink,
+  shortLink,
+  bgColor,
+}) => {
   return (
     <div className="flex flex-col items-center justify-between w-full p-6 bg-white rounded-lg md:flex-row">
       <p className="font-bold text-center text-veryDarkViolet md:text-left">
@@ -16,6 +26,6 @@ function ShortenLink({ longLink, shortLink, bgColor }) {
       </div>
     </div>
   );
-}
+};
 
 export default ShortenLink;

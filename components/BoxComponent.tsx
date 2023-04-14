@@ -1,6 +1,18 @@
 import React from "react";
 
-function BoxComponent({ h5text, ptext, mtop, imgname }) {
+interface BoxComponentProps {
+  h5text: string;
+  ptext: string;
+  mtop: string;
+  imgname: string;
+}
+
+const BoxComponent: React.FC<BoxComponentProps> = ({
+  h5text,
+  ptext,
+  mtop,
+  imgname,
+}) => {
   return (
     <div
       className={`relative flex flex-col ${mtop} p-6 space-y-6 bg-white rounded-lg md:w-1/3`}
@@ -23,6 +35,6 @@ function BoxComponent({ h5text, ptext, mtop, imgname }) {
       </p>
     </div>
   );
-}
+};
 
 export default BoxComponent;
