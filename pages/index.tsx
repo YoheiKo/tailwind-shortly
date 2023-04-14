@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import ShortenLink from "../components/shortenLink";
-import BoxComponent from "../components/boxComponent";
+import ShortenLink from "../components/ShortenLink";
+import BoxComponent from "../components/BoxComponent";
 
 // https://github.com/bradtraversy/tailwind-course-projects
 // https://uidesigndaily.com/
