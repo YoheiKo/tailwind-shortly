@@ -59,6 +59,17 @@
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
+
+.mobile-menu-enter {
+  transform: translate(140%, 0);
+  transition: transform 0.25s ease-out;
+}
+
+.mobile-menu-enter-active {
+  transform: translate(0, 0);
+  transition: transform 0.25s ease-out;
+}
+
 /*Hamburger End*/
 
 /* @layer base {

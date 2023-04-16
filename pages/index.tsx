@@ -106,11 +106,19 @@ const Home: NextPage = () => {
             </button>
           </div>
           {/* Todo Mobile Menu */}
-          <div
+          {/* <div
             id="menu"
             className={`absolute ${
               !menuOpen ? "hidden" : "flex"
             } p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100 lg:hidden`}
+          > */}
+          <div
+            id="menu"
+            className={`absolute ${
+              !menuOpen ? "mobile-menu-enter" : "flex mobile-menu-enter-active"
+            } p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100 lg:hidden"`}
+
+            // menuOpen ? "mobile-menu-enter-active" : "mobile-menu-enter"
           >
             <div className="flex flex-col items-center justify-center w-full space-y-6 font-bold text-white rounded-sm">
               <Link href="#" className="w-full text-center">
